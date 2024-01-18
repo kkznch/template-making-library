@@ -1,5 +1,6 @@
 import pluginTypeScript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
+import pluginPrettier from 'eslint-config-prettier';
 import pluginImport from 'eslint-plugin-import';
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
@@ -28,6 +29,7 @@ export default [
       ...pluginTypeScript.configs['eslint-recommended'].rules,
       ...pluginTypeScript.configs['recommended'].rules,
       ...pluginImport.configs['recommended'].rules,
+      ...pluginPrettier.rules,
       'no-unused-vars': 'off',
       'import/order': [
         'error',
