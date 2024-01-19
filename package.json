@@ -9,6 +9,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "type:check": "tsc --pretty --noEmit",
     "test": "vitest",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint .",
     "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint --fix .",

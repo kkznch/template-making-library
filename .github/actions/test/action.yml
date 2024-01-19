@@ -1,0 +1,28 @@
+name: Testing
+description: Test with type check, lint, format, test
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.6.1
+
+    - name: Install dependencies
+      run: pnpm install
+      shell: bash
+
+    - name: type check
+      run: pnpm type:check
+      shell: bash
+
+    - name: lint
+      run: |
+        pnpm lint
+        pnpm format:check
+      shell: bash
+
+    - name: test
+      run: pnpm test
+      shell: bash
