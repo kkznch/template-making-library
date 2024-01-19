@@ -9,6 +9,11 @@ runs:
       with:
         node-version: 20.6.1
 
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+
     - name: Install dependencies
       run: pnpm install
       shell: bash
